@@ -1,0 +1,8 @@
+{
+  "name": "Copy of TalentAI - Next-Gen Recruitment",
+  "description": "An AI-powered recruitment platform that streamlines hiring through intelligent resume parsing, automated candidate screening, and interactive AI practice interviews.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
