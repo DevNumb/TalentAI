@@ -1,33 +1,40 @@
 
+export type JobType = 'Full-time' | 'Part-time' | 'Contract' | 'Remote';
+export type AppStatus = 'applied' | 'screening' | 'interview' | 'offered' | 'rejected';
+
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+}
+
+export interface UserPreferences {
+  roles: string[];
+  locations: string[];
+  industries: string[];
+}
+
 export interface Job {
   id: string;
   title: string;
   company: string;
   location: string;
   salary: string;
-  type: 'Full-time' | 'Part-time' | 'Contract' | 'Remote';
+  type: JobType;
   description: string;
   requirements: string[];
-  postedAt: string;
-  category: string;
-}
-
-export interface Candidate {
-  id: string;
-  name: string;
-  email: string;
-  score: number;
-  summary: string;
-  matchReasons: string[];
+  posted_at?: string;
+  category?: string;
+  matchScore?: number;
 }
 
 export interface Application {
   id: string;
-  jobId: string;
-  jobTitle: string;
+  job_id: string;
+  job_title: string;
   company: string;
-  status: 'applied' | 'screening' | 'interview' | 'offered' | 'rejected';
-  appliedAt: string;
-  matchScore: number;
-  aiFeedback: string;
+  status: AppStatus;
+  applied_at: string;
+  match_score: number;
+  ai_feedback: string;
 }
